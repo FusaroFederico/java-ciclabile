@@ -10,7 +10,11 @@ public class Ciclabile {
 		this.interi = interi;
 		this.elementoCorrente = 0;
 	}
-
+	public Ciclabile() {
+		this.interi = new int[0];
+		this.elementoCorrente = 0;
+	}
+	
 	// getElementoSuccessivo
 	public int getElementoSuccessivo() {
 		this.elementoCorrente ++;
@@ -23,5 +27,15 @@ public class Ciclabile {
 			return true;
 		}
 		return false;
+	}
+	
+	// addElemento
+	public void addElemento(int intero) {
+		int[] arrayCopia = new int[this.interi.length + 1];
+		for (int i = 0; i < interi.length; i++) {
+			arrayCopia[i] = this.interi[i];
+		}
+		arrayCopia[this.interi.length] = intero;
+		this.interi = arrayCopia;
 	}
 }
