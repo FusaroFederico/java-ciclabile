@@ -23,7 +23,7 @@ public class Ciclabile {
 	
 	// hasAncoraElementi
 	public boolean hasAncoraElementi() {
-		if (elementoCorrente < (interi.length - 1)) {
+		if (elementoCorrente < interi.length) {
 			return true;
 		}
 		return false;
@@ -38,4 +38,24 @@ public class Ciclabile {
 		arrayCopia[this.interi.length] = intero;
 		this.interi = arrayCopia;
 	}
+	
+	// resetElementoCorrente
+	public void resetElementoCorrente() {
+		this.elementoCorrente = 0;
+	}
+	
+	// getters and setters
+	public int[] getInteri() {
+		return interi;
+	}
+	public void setInteri(int[] interi) {
+		this.interi = interi;
+	}
+	public int getElementoCorrente() {
+		return elementoCorrente;
+	}
+	private void setElementoCorrente(int elementoCorrente) {
+		this.elementoCorrente = elementoCorrente;
+	}
+	
 }
