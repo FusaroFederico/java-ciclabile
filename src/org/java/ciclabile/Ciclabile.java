@@ -11,9 +11,17 @@ public class Ciclabile {
 		this.elementoCorrente = 0;
 	}
 
-	// getElementoSuccessivo method
+	// getElementoSuccessivo
 	public int getElementoSuccessivo() {
 		this.elementoCorrente ++;
 		return interi[this.elementoCorrente - 1];
+	}
+	
+	// hasAncoraElementi
+	public boolean hasAncoraElementi() {
+		if (elementoCorrente < (interi.length - 1)) {
+			return true;
+		}
+		return false;
 	}
 }
